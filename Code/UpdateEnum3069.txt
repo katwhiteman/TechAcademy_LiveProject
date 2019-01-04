@@ -1,0 +1,32 @@
+//Updated enum list to include new campus locations
+
+namespace JobPlacementDashboard.Models
+{
+    public enum JPStudentLocation
+    {
+        [Display(Name = "Seattle Local")]
+        SeattleLocal,
+        [Display(Name = "Denver Local")]
+        DenverLocal,
+        [Display(Name = "Seattle Online")]
+        SeattleRemote,
+        [Display(Name = "Denver Online")]
+        DenverRemote,
+        [Display(Name = "Portland Online")]
+        PortlandRemote,
+        [Display(Name = "Online")]
+        Remote,
+        [Display(Name = "Portland Local")]
+        PortlandLocal,
+        [Display(Name = "Austin Local")] //Start of the updated enum
+        AustinLocal,
+        [Display(Name = "Austin Online")]
+        AustinRemote,
+        [Display(Name = "Phoenix Local")]
+        PhoenixLocal,
+        [Display(Name = "Phoenix Online")]
+        PhoenixRemote
+        
+
+    }
+}

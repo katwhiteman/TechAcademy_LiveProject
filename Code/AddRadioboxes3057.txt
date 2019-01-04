@@ -1,0 +1,13 @@
+//Added radioboxes for the type of salary
+
+		<div class="form-group center-block">
+            @Html.LabelFor(model => model.JPSalary, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JPSalary, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.JPSalary, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10">
+                <input type="radio" name="SalaryType" id="Hourly" value="Hourly" />Hourly
+                <input type="radio" name="SalaryType" id="Annually" value="Annually" />Annually
+            </div>
+        </div>

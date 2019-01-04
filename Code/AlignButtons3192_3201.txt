@@ -1,0 +1,26 @@
+//Aligning the buttons left and right, created a new id to target through css.
+
+	//HTML
+	<input id="btn-left" type="submit" value="Create" class="btn btn-default" />
+	<div class="text-center">
+		<a id="btn-right" class="btn btn-default" @*id="bulletinbuttonBacktoBoard"*@ href="~/JPBulletins/Index">Back to Board</a>
+	</div> 
+
+	//CSS
+    #btn-right {
+        float: right;        
+        display:inline-block;
+    }
+    #btn-left {
+        float: left;
+        text-align: left;
+        margin-left: 0%;
+        display: inline-block;
+    }
+	
+//Alternative way of aligning the buttons
+
+	<div class="row justify-content-between vertical-padding-for-button-group">
+		<input type="submit" value="Create" class="btn btn-default form-button-left mb-5" />
+		<a class="btn btn-default form-button-right" href="~/JPBulletins/Index">Back to Board</a>
+	</div>

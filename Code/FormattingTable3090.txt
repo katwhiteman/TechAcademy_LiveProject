@@ -1,0 +1,31 @@
+//Centered table contents except for the first column which was text-left (to match rest of website)
+
+@foreach (var item in Model)
+        {
+            <tr id="JPHiresTable">
+                <td id="JPHiresTable" class="text-left">
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.FirstName)
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.LastName)
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    <a href="http://@Html.ExternalLink(item.JPCareersPage)" target="_blank">@Html.DisplayFor(modelItem => item.JPCompanyName)</a>
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    @Html.DisplayFor(modelItem => item.JPJobTitle)
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    @Html.DisplayFor(modelItem => item.JPJobCategory).ToString().Replace("_", " ")
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    @Html.DisplayFor(modelItem => item.JPSalary).ToString()
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    @Html.DisplayFor(modelItem => item.JPCompanyCity)
+                    ,
+                    @Html.DisplayFor(modelItem => item.JPCompanyState)
+                </td>
+                <td id="JPHiresTable" class="text-center">
+                    @item.JPHireDate.ToShortDateString()
+                </td>
+            </tr>
+        }
